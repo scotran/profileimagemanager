@@ -1,12 +1,13 @@
 # User Profile Image Manager :city_sunrise:
 
-A __User Profile Image Manager__ built using __React__ for frontend and __Spring Boot Technologies__ (Web, JPA, etc) for backend and __Amazon AWS S3__ and __MySQL Database__ for image storage and database. The project features typical Service and Repository layers.
+A __User Profile Image Manager__ built using __React Framework__ for the frontend and __Spring Boot Technologies__ (Web, JPA, etc) for the backend and __Amazon AWS S3__ and __MySQL Database__ for image storage and database. The project features typical Service and Repository layers.
 
 This project is built for the intention of uploading (and downloading) profile images for different users. The client is able to add different users and upload images for each user. The manager displays each user's name, ID, and latest profile picture. This application can be adapted to be used in a social media site or in a similar environment where profile pictures are used. Other adaptations can include file types other than images. 
 
 **How does it work - More Info** :small_red_triangle_down:
 <details>
 <summary>'Logic' behind the code</summary>
+
 ![Diagram](https://github.com/NotTheBest/profileimagemanager/blob/master/readme-assets/diagram.png?raw=true)
 
 The client inputs user profile names to the frontend and a POST request is called to the backend server (with the help of __Axios__) where the server creates a new user with a random ID and stores the information to the database. When an image is uploaded, a POST request is called to the backend server where the server stores the image to S3 and the image url to the database. Each time the frontend is loaded, a GET request is made to the server for all the user profiles and the server returns a list of the user profiles from the database. When the frontend maps out the user profiles, another GET request is called for each profile to download each profile picture and the server downloads the data from S3 and returns it into each image src tag in the form of a byte array. A history of images is saved to S3 to allow for 'logging' of previous profile pictures for each user.
@@ -58,6 +59,7 @@ npm start
 ```
 You can then access the application here: http://localhost:3000/
 
+Note: This is not using the React app's production build. If you would like to build the production build and deploy, you can!
 ![Preview](https://github.com/NotTheBest/profileimagemanager/blob/master/readme-assets/uploadedimage.png?raw=true)
 
 ## Configuration
