@@ -7,7 +7,7 @@ This project is built for the intention of uploading (and downloading) profile i
 **How does it work - More Info** :small_red_triangle_down:
 <details>
 <summary>'Logic' behind the code</summary>
-![Diagram](https://github.com/NotTheBest/profileimagemanager/blob/master/preview-images/addprofile.gif)
+![Diagram](https://github.com/NotTheBest/profileimagemanager/blob/master/readme-assets/addprofile.gif)
 
 The client inputs user profile names to the frontend and a POST request is called to the backend server (with the help of __Axios__) where the server creates a new user with a random ID and stores the information to the database. When an image is uploaded, a POST request is called to the backend server where the server stores the image to S3 and the image url to the database. Each time the frontend is loaded, a GET request is made to the server for all the user profiles and the server returns a list of the user profiles from the database. When the frontend maps out the user profiles, another GET request is called for each profile to download each profile picture and the server downloads the data from S3 and returns it into each image src tag in the form of a byte array. A history of images is saved to S3 to allow for 'logging' of previous profile pictures for each user.
 
@@ -21,15 +21,15 @@ Note: After uploading an image, a refresh might be needed. This is due to the la
 
 * Add a new User Profile
 
-![Add Profile](https://github.com/NotTheBest/profileimagemanager/blob/master/preview-images/diagram.png?raw=true)
+![Add Profile](https://github.com/NotTheBest/profileimagemanager/blob/master/readme-assets/diagram.png?raw=true)
 
 * Drop an image to upload
 
-![Drop Image](https://github.com/NotTheBest/profileimagemanager/blob/master/preview-images/dropimage.gif)
+![Drop Image](https://github.com/NotTheBest/profileimagemanager/blob/master/readme-assets/dropimage.gif)
 
 * Displays profile picture
 
-![Uploaded Image](https://github.com/NotTheBest/profileimagemanager/blob/master/uploadedimage.png?raw=true)
+![Uploaded Image](https://github.com/NotTheBest/profileimagemanager/blob/master/readme-assets/uploadedimage.png?raw=true)
 
 </details>
 
@@ -58,7 +58,7 @@ npm start
 ```
 You can then access the application here: http://localhost:3000/
 
-![Preview](https://github.com/NotTheBest/profileimagemanager/blob/master/preview-images/uploadedimage.png?raw=true)
+![Preview](https://github.com/NotTheBest/profileimagemanager/blob/master/readme-assets/uploadedimage.png?raw=true)
 
 ## Configuration
 This project uses __Amazon S3__ to store images. In order to connect with your S3 Bucket, edit
