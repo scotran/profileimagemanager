@@ -60,6 +60,7 @@ npm start
 You can then access the application here: http://localhost:3000/
 
 Note: This is not using the React app's production build. If you would like to build the production build and deploy, you can!
+
 ![Preview](https://github.com/NotTheBest/profileimagemanager/blob/master/readme-assets/uploadedimage.png?raw=true)
 
 ## Configuration
